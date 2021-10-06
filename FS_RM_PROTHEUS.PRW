@@ -89,6 +89,7 @@ WSMETHOD mtdInclusaoCP WSRECEIVE n_Opc, o_EmpFil, o_ParamTit, c_NumRet, c_PreRet
 		AADD( a_Array, { "E2_HIST"		, PADR(::o_ParamTit:c_Hist, TAMSX3("E2_HIST")[1])			,NIL })
 		AADD( a_Array, { "E2_MULTNAT" 	, '2'														,Nil })
 
+
 		MsExecAuto( { |x,y,z| FINA050(x,y,z)}, a_Array,, ::n_Opc) // 3 - Inclusao, 4 - Alteração, 5 - Exclusão
 
 		If lMsErroAuto
